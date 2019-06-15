@@ -442,7 +442,7 @@ class ExtHostTreeView<T> extends Disposable {
 	}
 
 	private createTreeNode(element: T, extensionTreeItem: vscode.TreeItem, parent: TreeNode | Root): TreeNode {
-		const disposable: DisposableStore = new DisposableStore();
+		const disposable = new DisposableStore();
 		const handle = this.createHandle(element, extensionTreeItem, parent);
 		const icon = this.getLightIconPath(extensionTreeItem);
 		const item = {
